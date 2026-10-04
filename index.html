@@ -128,8 +128,8 @@ document.querySelector('.form').addEventListener('submit', function(e) {
     'Estimated Quantity: ' + f.elements['Estimated Quantity'].value,
     'Project Details: ' + f.elements['Project Details'].value
   ].join('\n');
-  const url = 'https://mail.google.com/mail/?view=cm&to=a707962599%40gmail.com&su=' +
-    encodeURIComponent('Shibifen Business Inquiry') + '&body=' + encodeURIComponent(body);
+  const url = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&to=a707962599%40gmail.com&su=' +
+     encodeURIComponent('Shibifen Business Inquiry') + '&body=' + encodeURIComponent(body);
   window.open(url, '_blank');
 });
 </script>
