@@ -118,18 +118,27 @@
 <script>
 document.querySelector('.form').addEventListener('submit', function(e) {
   e.preventDefault();
+
   const f = this;
+  const getValue = (name) => {
+    const field = f.querySelector(`[name="${name}"]`);
+    return field ? field.value : '';
+  };
+
   const body = [
-    'Full Name: ' + f.elements['Name'].value,
-    'Business Email: ' + f.elements['Email'].value,
-    'Company: ' + f.elements['Company'].value,
-    'Country / Region: ' + f.elements['Country'].value,
-    'Inquiry Type: ' + f.elements['Inquiry Type'].value,
-    'Estimated Quantity: ' + f.elements['Estimated Quantity'].value,
-    'Project Details: ' + f.elements['Project Details'].value
+    'Full Name: ' + getValue('Name'),
+    'Business Email: ' + getValue('Email'),
+    'Company: ' + getValue('Company'),
+    'Country / Region: ' + getValue('Country'),
+    'Inquiry Type: ' + getValue('Inquiry Type'),
+    'Estimated Quantity: ' + getValue('Estimated Quantity'),
+    'Project Details: ' + getValue('Project Details')
   ].join('\n');
+
   const url = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&to=a707962599%40gmail.com&su=' +
-     encodeURIComponent('Shibifen Business Inquiry') + '&body=' + encodeURIComponent(body);
+    encodeURIComponent('Shibifen Business Inquiry') +
+    '&body=' + encodeURIComponent(body);
+
   window.open(url, '_blank');
 });
 </script>
