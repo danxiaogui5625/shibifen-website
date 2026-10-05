@@ -99,7 +99,9 @@
   <section id="contact">
     <div class="wrap contact-grid">
       <div><div class="eyebrow">Contact Shibifen</div><h2>Tell Us What Your Business Needs</h2><p style="margin-top:16px">Request product information, wholesale details or an OEM/ODM discussion. Add your real business contact details before publishing.</p><div class="contact-list"><span>✉ Email: <a href="https://mail.google.com/mail/?view=cm&to=a707962599%40gmail.com">a707962599@gmail.com</a></span><span>◉ WhatsApp: add your business number</span><span>◎ Global B2B inquiries welcome</span></div></div>
-     <form class="form" action="https://mail.google.com/mail/?view=cm&to=a707962599%40gmail.com" method="get" target="_blank">
+     <form class="form" action="https://formsubmit.co/a707962599@gmail.com" method="POST">
+         <input type="hidden" name="_subject" value="Shibifen Business Inquiry">
+         <input type="hidden" name="_template" value="table">
         <label>Full Name *<input required name="Name" autocomplete="name" placeholder="Your name"></label>
         <label>Business Email *<input required type="email" name="Email" autocomplete="email" placeholder="name@company.com"></label>
         <label>Company / Brand<input name="Company" placeholder="Company name"></label>
@@ -107,7 +109,7 @@
         <label>Inquiry Type<select name="Inquiry Type"><option>Wholesale Products</option><option>OEM / Private Label</option><option>ODM / Product Development</option><option>Samples and Catalog</option><option>Other</option></select></label>
         <label>Estimated Quantity<select name="Estimated Quantity"><option>Not decided</option><option>Sample / small trial</option><option>500–1,000 units</option><option>1,000–5,000 units</option><option>5,000+ units</option></select></label>
         <label class="full">Project Details<textarea name="Project Details" placeholder="Tell us which products or customization you are interested in."></textarea></label>
-        <div class="full"><button class="btn" type="submit">Send Inquiry →</button><p class="form-note">Demo form: mailto opens the visitor’s email app and is not a hosted form service. Before launch, replace this with a tested form endpoint and publish your privacy notice.</p></div>
+        <div class="full"><button class="btn" type="submit">Send Inquiry →</button><p class="form-note">After submitting, your inquiry will be sent for processing. Please do not include sensitive personal information.</p></div>
       </form></div>
     </div>
   </section>
@@ -115,32 +117,5 @@
 </main>
 <footer><div class="wrap"><div class="footer-top"><div class="footer-brand"><a class="logo" href="#home">Shibifen<small>SKINCARE FOR A BETTER TOMORROW</small></a><p>Skincare products and OEM/ODM collaboration for global business customers.</p></div><div class="footer-links"><a href="#products">Products</a><a href="#oem">OEM/ODM</a><a href="#about">About Us</a><a href="#quality">Quality</a><a href="#contact">Contact</a></div></div><div class="copyright"><span>© <span id="year"></span> Shibifen. All rights reserved.</span><span>Privacy Policy · Terms of Use (add reviewed policy pages before launch)</span></div></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-<script>
-document.querySelector('.form').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const f = this;
-  const getValue = (name) => {
-    const field = f.querySelector(`[name="${name}"]`);
-    return field ? field.value : '';
-  };
-
-  const body = [
-    'Full Name: ' + getValue('Name'),
-    'Business Email: ' + getValue('Email'),
-    'Company: ' + getValue('Company'),
-    'Country / Region: ' + getValue('Country'),
-    'Inquiry Type: ' + getValue('Inquiry Type'),
-    'Estimated Quantity: ' + getValue('Estimated Quantity'),
-    'Project Details: ' + getValue('Project Details')
-  ].join('\n');
-
-  const url = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&to=a707962599%40gmail.com&su=' +
-    encodeURIComponent('Shibifen Business Inquiry') +
-    '&body=' + encodeURIComponent(body);
-
-  window.open(url, '_blank');
-});
-</script>
 </body>
 </html>
