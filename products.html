@@ -3,1053 +3,181 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Explore Shibifen skincare products including Facial Care, Eye Care, Body Care, Sun Care and Cleansing.">
-<title>Products | Shibifen</title>
-
+<title>Skincare Products | Shibifen OEM/ODM Private Label</title>
+<meta name="description" content="Explore Shibifen skincare product categories for OEM/ODM and private label projects: facial care, eye care, body care, sun care and cleansing.">
 <style>
-:root{
---green:#173f35;
---green2:#2b5d4e;
---sage:#e9eee7;
---cream:#f7f4ed;
---ink:#1e302b;
---muted:#62736c;
---line:#dfe5de;
---white:#fff
-}
-
-*{box-sizing:border-box}
-
+:root{--green:#173f35;--green2:#2f6a58;--sage:#edf3ee;--cream:#f7f3ea;--ink:#17251f;--muted:#62736c;--line:#dfe7e1;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-color:var(--ink);
-background:#fff;
-line-height:1.6
-}
-
-a{
-color:inherit;
-text-decoration:none
-}
-
-.wrap{
-width:min(1160px,92%);
-margin:auto
-}
-
-header{
-height:76px;
-display:flex;
-align-items:center;
-background:#fff;
-border-bottom:1px solid #edf0eb;
-position:sticky;
-top:0;
-z-index:10
-}
-
-.nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:24px
-}
-
-.logo{
-font-family:Georgia,serif;
-font-size:27px;
-font-weight:bold;
-letter-spacing:-.8px;
-color:var(--green);
-line-height:1
-}
-
-.logo small{
-display:block;
-font:9px Arial,sans-serif;
-letter-spacing:1.5px;
-margin-top:4px;
-color:var(--muted)
-}
-
-nav{
-display:flex;
-gap:24px;
-align-items:center;
-font-size:13px;
-color:#354a42
-}
-
-nav a:hover{
-color:#8a9d72
-}
-
-.nav-cta,
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-background:var(--green);
-color:#fff;
-border-radius:4px;
-padding:12px 18px;
-font-size:13px;
-font-weight:700;
-border:1px solid var(--green)
-}
-
-.btn.secondary{
-background:transparent;
-color:var(--green)
-}
-
-.hero{
-background:
-linear-gradient(90deg,rgba(247,244,237,.98),rgba(247,244,237,.88)),
-url('https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1800&q=85')
-center/cover;
-padding:90px 0
-}
-
-.hero-copy{
-max-width:760px
-}
-
-.eyebrow{
-text-transform:uppercase;
-letter-spacing:2px;
-font-size:11px;
-font-weight:bold;
-color:var(--green2)
-}
-
-h1,h2,h3{
-font-family:Georgia,'Times New Roman',serif;
-line-height:1.15;
-margin:0;
-color:var(--green)
-}
-
-h1{
-font-size:clamp(40px,5vw,62px);
-margin:16px 0
-}
-
-h2{
-font-size:clamp(29px,3vw,39px)
-}
-
-h3{
-font-size:21px
-}
-
-.hero p{
-max-width:650px;
-font-size:16px;
-color:var(--muted)
-}
-
-section{
-padding:76px 0
-}
-
-.section-head{
-text-align:center;
-max-width:700px;
-margin:0 auto 42px
-}
-
-.section-head p{
-margin-top:13px;
-color:var(--muted)
-}
-
-.category-nav{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-margin-bottom:42px
-}
-
-.category-nav a{
-border:1px solid var(--line);
-padding:9px 15px;
-font-size:12px;
-color:var(--green);
-border-radius:3px
-}
-
-.category-nav a:hover{
-background:var(--green);
-color:#fff
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px
-}
-
-.product{
-background:#fff;
-border:1px solid var(--line);
-border-radius:5px;
-overflow:hidden;
-transition:transform .25s,box-shadow .25s
-}
-
-.product:hover{
-transform:translateY(-4px);
-box-shadow:0 12px 30px rgba(23,63,53,.08)
-}
-
-.product-image{
-height:290px;
-background:#f1f2ed;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-overflow:hidden
-}
-
-.product-image:before{
-content:"";
-position:absolute;
-width:210px;
-height:210px;
-border-radius:50%;
-background:#ffffffaa
-}
-
-.product-image.eye{
-background:#eef0eb
-}
-
-.product-image.body{
-background:#f3eee7
-}
-
-.product-image.sun{
-background:#f6f0e2
-}
-
-.product-image.clean{
-background:#edf2ef
-}
-
-.bottle{
-position:relative;
-z-index:1;
-width:90px;
-height:160px;
-background:linear-gradient(
-90deg,
-#dcdad0,
-#fff 48%,
-#dfddd4
-);
-border:1px solid #d1cfc6;
-border-radius:8px 8px 15px 15px;
-box-shadow:10px 15px 25px #1e28231c
-}
-
-.bottle:before{
-content:"";
-position:absolute;
-width:38px;
-height:25px;
-background:#d7d5cc;
-border:1px solid #c9c7bd;
-border-radius:4px 4px 1px 1px;
-top:-26px;
-left:25px
-}
-
-.bottle:after{
-content:"SHIBIFEN";
-position:absolute;
-left:0;
-right:0;
-top:70px;
-text-align:center;
-font-size:8px;
-letter-spacing:1.3px;
-color:#68736a
-}
-
-.bottle.small{
-width:65px;
-height:115px
-}
-
-.bottle.small:before{
-width:30px;
-height:20px;
-left:17px;
-top:-21px
-}
-
-.bottle.small:after{
-top:48px
-}
-
-.jar{
-position:relative;
-z-index:1;
-width:125px;
-height:78px;
-background:linear-gradient(
-90deg,
-#e1ded5,
-#fff 48%,
-#ddd9cf
-);
-border:1px solid #d0cdc3;
-border-radius:11px 11px 17px 17px;
-box-shadow:10px 15px 25px #1e28231c
-}
-
-.jar:before{
-content:"";
-position:absolute;
-left:-3px;
-right:-3px;
-top:-19px;
-height:20px;
-border-radius:5px;
-background:linear-gradient(#fff,#d6d3c9);
-border:1px solid #d0cdc3
-}
-
-.jar:after{
-content:"SHIBIFEN";
-position:absolute;
-left:0;
-right:0;
-top:34px;
-text-align:center;
-font-size:8px;
-letter-spacing:1.3px;
-color:#68736a
-}
-
-.product-info{
-padding:22px
-}
-
-.product-category{
-font-size:10px;
-text-transform:uppercase;
-letter-spacing:1.5px;
-font-weight:bold;
-color:var(--green2);
-margin-bottom:7px
-}
-
-.product h3{
-font-family:Arial,Helvetica,sans-serif;
-font-size:17px;
-font-weight:700;
-color:var(--ink);
-margin-bottom:8px
-}
-
-.product-info p{
-font-size:13px;
-color:var(--muted);
-min-height:42px;
-margin:0 0 16px
-}
-
-.inquiry{
-font-size:12px;
-font-weight:bold;
-color:var(--green);
-letter-spacing:.5px
-}
-
-.band{
-background:#f6f8f4
-}
-
-.oem{
-background:var(--cream)
-}
-
-.oem-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:55px;
-align-items:center
-}
-
-.oem-copy p{
-margin:18px 0 24px;
-color:var(--muted)
-}
-
-.steps{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px
-}
-
-.step{
-background:#fff;
-border:1px solid var(--line);
-padding:20px;
-border-radius:5px
-}
-
-.num{
-width:34px;
-height:34px;
-border-radius:50%;
-display:grid;
-place-items:center;
-background:var(--sage);
-color:var(--green);
-font-weight:bold;
-margin-bottom:12px
-}
-
-.step h3{
-font-family:Arial,sans-serif;
-font-size:14px;
-font-weight:700;
-margin-bottom:6px
-}
-
-.step p{
-font-size:12px;
-color:var(--muted);
-margin:0
-}
-
-.cta{
-background:var(--green);
-color:#fff;
-padding:48px 0
-}
-
-.cta-inner{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:25px
-}
-
-.cta h2{
-color:#fff;
-font-size:31px
-}
-
-.cta p{
-color:#dbe5dd;
-margin-top:8px
-}
-
-.cta .btn{
-background:#fff;
-color:var(--green);
-border-color:#fff;
-white-space:nowrap
-}
-
-footer{
-background:#102f28;
-color:#e9eee7;
-padding:34px 0 20px
-}
-
-.footer-top{
-display:flex;
-justify-content:space-between;
-gap:30px;
-align-items:start
-}
-
-.footer-brand .logo{
-color:#fff
-}
-
-.footer-brand p{
-color:#c3d2c9;
-font-size:12px;
-margin-top:12px;
-max-width:300px
-}
-
-.footer-links{
-display:flex;
-gap:18px;
-flex-wrap:wrap;
-font-size:12px
-}
-
-.copyright{
-border-top:1px solid #35544b;
-margin-top:25px;
-padding-top:16px;
-display:flex;
-justify-content:space-between;
-gap:15px;
-flex-wrap:wrap;
-color:#b6c8bf;
-font-size:11px
-}
-
-@media(max-width:850px){
-
-nav{
-display:none
-}
-
-.products{
-grid-template-columns:1fr 1fr
-}
-
-.oem-grid{
-grid-template-columns:1fr
-}
-
-.cta-inner{
-align-items:flex-start;
-flex-direction:column
-}
-
-.hero{
-padding:70px 0
-}
-
-}
-
-@media(max-width:520px){
-
-section{
-padding:55px 0
-}
-
-.products{
-grid-template-columns:1fr
-}
-
-.product-image{
-height:270px
-}
-
-.steps{
-grid-template-columns:1fr
-}
-
-.hero{
-padding:58px 0
-}
-
-.hero h1{
-font-size:42px
-}
-
-.footer-top{
-flex-direction:column
-}
-
-}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.62}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1180px,92%);margin:auto}
+header{height:76px;display:flex;align-items:center;background:#fff;border-bottom:1px solid #edf0eb;position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:700;color:var(--green);line-height:1}
+.logo small{display:block;margin-top:4px;font:9px Arial,sans-serif;letter-spacing:1.5px;color:var(--muted)}
+nav{display:flex;gap:23px;align-items:center;font-size:13px;color:#354a42}
+nav a:hover{color:var(--green2)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;background:var(--green);color:#fff;border-radius:4px;padding:12px 18px;font-size:13px;font-weight:700;border:1px solid var(--green)}
+.btn.secondary{background:#fff;color:var(--green)}
+.hero{background:linear-gradient(110deg,#f8f4ec 0%,#f8f4ec 50%,#eef4ef 100%);padding:78px 0}
+.hero-copy{max-width:760px}
+.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--green2)}
+h1,h2{font-family:Georgia,'Times New Roman',serif;line-height:1.12;color:var(--green);letter-spacing:-.5px}
+h1{font-size:clamp(42px,5vw,64px);margin:16px 0}
+h2{font-size:clamp(30px,3.2vw,42px)}
+h3{font-size:18px;color:var(--ink)}
+.hero p{max-width:650px;color:var(--muted);font-size:16px;margin-bottom:28px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:76px 0}
+.section-head{text-align:center;max-width:760px;margin:0 auto 42px}
+.section-head p{margin-top:13px;color:var(--muted)}
+.category-nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:38px}
+.category-nav a{border:1px solid var(--line);padding:9px 15px;font-size:12px;color:var(--green);border-radius:4px;background:#fff}
+.category-nav a:hover{background:var(--green);color:#fff}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.product{background:#fff;border:1px solid var(--line);border-radius:7px;overflow:hidden;transition:.25s}
+.product:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(23,63,53,.09)}
+.product-image{height:275px;background:#f1f5f0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.product-image:before{content:"";position:absolute;width:200px;height:200px;border-radius:50%;background:#ffffffb8}
+.product-image.body{background:#f4efe7}
+.product-image.sun{background:#f7f1df}
+.product-image.clean{background:#edf4f1}
+.product-image.eye{background:#eef1ec}
+.bottle,.jar,.tube{position:relative;z-index:1;box-shadow:10px 16px 28px rgba(23,37,31,.14)}
+.bottle{width:86px;height:158px;border:1px solid #d0d4ca;border-radius:8px 8px 16px 16px;background:linear-gradient(90deg,#ddd9ce,#fff 48%,#d8d4c9)}
+.bottle:before{content:"";position:absolute;top:-24px;left:24px;width:38px;height:24px;border-radius:4px 4px 1px 1px;background:#d9d5ca;border:1px solid #cbc7bc}
+.bottle:after,.jar:after,.tube:after{position:absolute;left:0;right:0;text-align:center;color:#68736a;letter-spacing:1.3px}
+.bottle:after{content:"SHIBIFEN";top:68px;font-size:8px}
+.bottle.small{width:64px;height:116px}.bottle.small:before{width:30px;height:20px;left:17px;top:-21px}.bottle.small:after{top:49px}
+.jar{width:122px;height:76px;border:1px solid #d0d4ca;border-radius:11px 11px 17px 17px;background:linear-gradient(90deg,#e1ddd2,#fff 48%,#dbd6ca)}
+.jar:before{content:"";position:absolute;left:-3px;right:-3px;top:-18px;height:20px;border-radius:5px;background:linear-gradient(#fff,#d8d4c8);border:1px solid #d0d4ca}
+.jar:after{content:"SHIBIFEN";top:32px;font-size:8px}
+.tube{width:74px;height:150px;border:1px solid #d0d4ca;border-radius:45px 45px 10px 10px;background:linear-gradient(90deg,#d8e1d7,#fff 48%,#d5ded4)}
+.tube:after{content:"SPF";top:64px;font-size:10px}
+.product-info{padding:22px}
+.product-category{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--green2);margin-bottom:8px}
+.product-info p{font-size:13px;color:var(--muted);min-height:42px;margin:8px 0 16px}
+.meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}
+.meta span{font-size:11px;border:1px solid var(--line);border-radius:3px;padding:5px 7px;color:#40534b;background:#fbfcfa}
+.inquiry{font-size:12px;font-weight:700;color:var(--green)}
+.band{background:#f8faf7}
+.oem-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:start}
+.oem-copy p{margin:16px 0 24px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.step{background:#fff;border:1px solid var(--line);padding:20px;border-radius:6px}
+.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--sage);color:var(--green);font-weight:700;margin-bottom:12px}
+.step h3{font-size:14px}.step p{font-size:12px;color:var(--muted);margin-top:6px}
+.cta{background:var(--green);color:#fff;padding:48px 0}
+.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}
+.cta h2{color:#fff;font-size:31px}.cta p{color:#dbe5dd;margin-top:8px}.cta .btn{background:#fff;color:var(--green);border-color:#fff;white-space:nowrap}
+footer{background:#102f28;color:#e9eee7;padding:34px 0 20px}
+.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:start}
+.footer-brand .logo{color:#fff}.footer-brand p{color:#c3d2c9;font-size:12px;margin-top:12px;max-width:340px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:12px}
+.copyright{border-top:1px solid #35544b;margin-top:25px;padding-top:16px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#b6c8bf;font-size:11px}
+@media(max-width:880px){nav{display:none}.products{grid-template-columns:1fr 1fr}.oem-grid{grid-template-columns:1fr}.cta-inner{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){section{padding:58px 0}.hero{padding:60px 0}.products,.steps{grid-template-columns:1fr}.footer-top{flex-direction:column}.product-image{height:255px}}
 </style>
 </head>
-
 <body>
-
 <header>
 <div class="wrap nav">
-
-<a class="logo" href="index.html">
-Shibifen
-<small>SKINCARE FOR A BETTER TOMORROW</small>
-</a>
-
+<a class="logo" href="index.html">Shibifen<small>SKINCARE FOR A BETTER TOMORROW</small></a>
 <nav>
 <a href="index.html">Home</a>
 <a href="products.html">Products</a>
 <a href="index.html#oem">OEM/ODM</a>
-<a href="index.html#about">About Us</a>
 <a href="index.html#quality">Quality</a>
-<a class="nav-cta" href="index.html#contact">Request a Quote ↗</a>
+<a class="nav-cta" href="index.html#contact">Request a Quote</a>
 </nav>
-
 </div>
 </header>
 
 <main>
-
 <section class="hero">
-<div class="wrap">
-<div class="hero-copy">
-
+<div class="wrap hero-copy">
 <div class="eyebrow">Shibifen Product Collection</div>
-
-<h1>Skincare Products<br>Made for Your Brand</h1>
-
-<p>
-Explore our skincare product categories for global brands,
-distributors and retailers. Product specifications, packaging
-options and OEM/ODM requirements can be discussed with our team.
-</p>
-
+<h1>Skincare products ready for private label projects</h1>
+<p>Explore core skincare categories for global beauty brands, importers and distributors. Each product can be discussed with packaging, label, MOQ, samples and OEM/ODM requirements.</p>
+<div class="hero-actions">
+<a class="btn" href="index.html#contact">Request Product Details</a>
+<a class="btn secondary" href="#facial">Browse Categories</a>
 </div>
 </div>
 </section>
 
-
 <section>
-
 <div class="wrap">
-
 <div class="section-head">
-
 <div class="eyebrow">Explore Our Products</div>
-
-<h2>Professional Skincare Categories</h2>
-
-<p>
-Discover skincare solutions across facial care, eye care,
-body care, sun care and cleansing.
-</p>
-
+<h2>Professional skincare categories</h2>
+<p>These product formats are suitable for private-label launches, product-line extensions and distributor sourcing programs.</p>
 </div>
-
-
 <div class="category-nav">
-
 <a href="#facial">Facial Care</a>
 <a href="#eye">Eye Care</a>
 <a href="#body">Body Care</a>
 <a href="#sun">Sun Care</a>
 <a href="#cleansing">Cleansing</a>
-
 </div>
-
-
 <div class="products">
-
-
-<article class="product" id="facial">
-
-<div class="product-image">
-<div class="bottle"></div>
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Facial Care</div>
-
-<h3>Facial Serum</h3>
-
-<p>
-Lightweight serum format designed for daily facial skincare routines.
-</p>
-
-<a class="inquiry" href="index.html#contact">
-Request Product Details →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="product">
-
-<div class="product-image">
-<div class="jar"></div>
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Facial Care</div>
-
-<h3>Moisturizing Cream</h3>
-
-<p>
-Daily moisturizing cream suitable for a complete facial care range.
-</p>
-
-<a class="inquiry" href="index.html#contact">
-Request Product Details →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="product">
-
-<div class="product-image clean">
-<div class="bottle"></div>
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Cleansing</div>
-
-<h3>Facial Cleanser</h3>
-
-<p>
-Gentle cleansing product for everyday skincare routines.
-</p>
-
-<a class="inquiry" href="index.html#contact">
-Request Product Details →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="product" id="eye">
-
-<div class="product-image eye">
-<div class="bottle small"></div>
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Eye Care</div>
-
-<h3>Eye Care Serum</h3>
-
-<p>
-Targeted eye-area skincare format for specialized collections.
-</p>
-
-<a class="inquiry" href="index.html#contact">
-Request Product Details →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="product">
-
-<div class="product-image eye">
-<div class="jar"></div>
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Eye Care</div>
-
-<h3>Eye Cream</h3>
-
-<p>
-Cream format for brands developing a dedicated eye care range.
-</p>
-
-<a class="inquiry" href="index.html#contact">
-Request Product Details →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="product" id="body">
-
-<div class="product-image body">
-<div class="bottle"></div>
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Body Care</div>
-
-<h3>Body Lotion</h3>
-
-<p>
-Daily body moisturizing product for personal care collections.
-</p>
-
-<a class="inquiry" href="index.html#contact">
-Request Product Details →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="product">
-
-<div class="product-image body">
-<div class="jar"></div>
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Body Care</div>
-
-<h3>Body Cream</h3>
-
-<p>
-Rich body care format suitable for coordinated skincare ranges.
-</p>
-
-<a class="inquiry" href="index.html#contact">
-Request Product Details →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="product" id="sun">
-
-<div class="product-image sun">
-<div class="bottle"></div>
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Sun Care</div>
-
-<h3>Sun Protection Lotion</h3>
-
-<p>
-Sun care product category for brands planning a broader skincare range.
-</p>
-
-<a class="inquiry" href="index.html#contact">
-Request Product Details →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="product" id="cleansing">
-
-<div class="product-image clean">
-<div class="bottle small"></div>
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Cleansing</div>
-
-<h3>Foaming Cleanser</h3>
-
-<p>
-Foaming cleansing format for facial skincare collections.
-</p>
-
-<a class="inquiry" href="index.html#contact">
-Request Product Details →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="product">
-
-<div class="product-image clean">
-<div class="jar"></div>
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Cleansing</div>
-
-<h3>Cleansing Balm</h3>
-
-<p>
-Balm format for brands looking to expand their cleansing assortment.
-</p>
-
-<a class="inquiry" href="index.html#contact">
-Request Product Details →
-</a>
-
-</div>
-
-</article>
-
-
+<article class="product" id="facial"><div class="product-image"><div class="bottle"></div></div><div class="product-info"><div class="product-category">Facial Care</div><h3>Facial Serum</h3><p>Lightweight serum format for hydrating, brightening or soothing skincare lines.</p><div class="meta"><span>Private label</span><span>Sample inquiry</span><span>Custom packaging</span></div><a class="inquiry" href="index.html#contact">Request Product Details →</a></div></article>
+<article class="product"><div class="product-image"><div class="jar"></div></div><div class="product-info"><div class="product-category">Facial Care</div><h3>Moisturizing Cream</h3><p>Daily cream format for facial care sets, ecommerce brands and distributor programs.</p><div class="meta"><span>Jar options</span><span>Label support</span><span>OEM/ODM</span></div><a class="inquiry" href="index.html#contact">Request Product Details →</a></div></article>
+<article class="product"><div class="product-image clean"><div class="bottle"></div></div><div class="product-info"><div class="product-category">Cleansing</div><h3>Facial Cleanser</h3><p>Gentle cleanser format for daily facial skincare routines and entry-level ranges.</p><div class="meta"><span>Tube/bottle</span><span>Daily care</span><span>Wholesale</span></div><a class="inquiry" href="index.html#contact">Request Product Details →</a></div></article>
+<article class="product" id="eye"><div class="product-image eye"><div class="bottle small"></div></div><div class="product-info"><div class="product-category">Eye Care</div><h3>Eye Care Serum</h3><p>Targeted eye-area serum format for specialized facial care collections.</p><div class="meta"><span>Small bottle</span><span>Premium range</span><span>Private label</span></div><a class="inquiry" href="index.html#contact">Request Product Details →</a></div></article>
+<article class="product"><div class="product-image eye"><div class="jar"></div></div><div class="product-info"><div class="product-category">Eye Care</div><h3>Eye Cream</h3><p>Cream format for brands developing a dedicated eye care or anti-aging line.</p><div class="meta"><span>Jar packaging</span><span>Gift set</span><span>OEM/ODM</span></div><a class="inquiry" href="index.html#contact">Request Product Details →</a></div></article>
+<article class="product" id="body"><div class="product-image body"><div class="bottle"></div></div><div class="product-info"><div class="product-category">Body Care</div><h3>Body Lotion</h3><p>Daily moisturizing body care product for personal care and retail assortments.</p><div class="meta"><span>Body care</span><span>Distributor</span><span>Large size</span></div><a class="inquiry" href="index.html#contact">Request Product Details →</a></div></article>
+<article class="product"><div class="product-image body"><div class="jar"></div></div><div class="product-info"><div class="product-category">Body Care</div><h3>Body Cream</h3><p>Rich body cream format for coordinated skincare ranges and seasonal promotions.</p><div class="meta"><span>Cream texture</span><span>Custom label</span><span>Retail line</span></div><a class="inquiry" href="index.html#contact">Request Product Details →</a></div></article>
+<article class="product" id="sun"><div class="product-image sun"><div class="tube"></div></div><div class="product-info"><div class="product-category">Sun Care</div><h3>Sun Protection Lotion</h3><p>Sun care category for brands planning a broader daily skincare assortment.</p><div class="meta"><span>Tube format</span><span>SPF line</span><span>Market inquiry</span></div><a class="inquiry" href="index.html#contact">Request Product Details →</a></div></article>
+<article class="product" id="cleansing"><div class="product-image clean"><div class="bottle small"></div></div><div class="product-info"><div class="product-category">Cleansing</div><h3>Foaming Cleanser</h3><p>Foaming cleanser format for facial skincare collections and starter product lines.</p><div class="meta"><span>Cleanser</span><span>Daily use</span><span>OEM/ODM</span></div><a class="inquiry" href="index.html#contact">Request Product Details →</a></div></article>
 </div>
 </div>
 </section>
-
 
 <section class="band">
-
-<div class="wrap">
-
-<div class="section-head">
-
-<div class="eyebrow">Private Label & OEM/ODM</div>
-
-<h2>Build Your Own Skincare Range</h2>
-
-<p>
-Our product categories can be discussed together with packaging,
-branding and customization requirements for your target market.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="oem">
-
 <div class="wrap oem-grid">
-
 <div class="oem-copy">
-
-<div class="eyebrow">OEM / ODM Services</div>
-
-<h2>From Product Selection to Your Brand</h2>
-
-<p>
-Tell us which products you are interested in and what type of
-business project you are planning. We can discuss product options,
-packaging requirements and project details.
-</p>
-
-<a class="btn" href="index.html#contact">
-Discuss Your Project →
-</a>
-
+<div class="eyebrow">Private Label & OEM/ODM</div>
+<h2>Tell us your product plan and target market</h2>
+<p>For faster quotation, please share the product category, expected quantity, destination country, packaging preference and whether you need private label or formula customization.</p>
+<a class="btn" href="index.html#contact">Discuss Your Project →</a>
 </div>
-
-
 <div class="steps">
-
-<div class="step">
-<div class="num">01</div>
-<h3>Product Selection</h3>
-<p>Choose the product categories and formats that fit your market.</p>
+<div class="step"><div class="num">01</div><h3>Choose Products</h3><p>Select categories and product formats that match your market.</p></div>
+<div class="step"><div class="num">02</div><h3>Confirm Packaging</h3><p>Discuss bottle, jar, tube, label and box requirements.</p></div>
+<div class="step"><div class="num">03</div><h3>Review Samples</h3><p>Request sample direction, texture, scent and positioning.</p></div>
+<div class="step"><div class="num">04</div><h3>Quote & Produce</h3><p>Confirm MOQ, lead time, price, packing and shipment details.</p></div>
 </div>
-
-<div class="step">
-<div class="num">02</div>
-<h3>Packaging & Branding</h3>
-<p>Discuss packaging, labeling and private label requirements.</p>
 </div>
-
-<div class="step">
-<div class="num">03</div>
-<h3>Samples & Review</h3>
-<p>Review available samples, specifications and project requirements.</p>
-</div>
-
-<div class="step">
-<div class="num">04</div>
-<h3>Production Inquiry</h3>
-<p>Discuss MOQ, lead time, documentation and shipping requirements.</p>
-</div>
-
-</div>
-
-</div>
-
 </section>
-
 
 <section class="cta">
-
 <div class="wrap cta-inner">
-
-<div>
-
-<h2>Ready to Discuss Your Product?</h2>
-
-<p>
-Send us your product interests and business requirements.
-</p>
-
+<div><h2>Ready to discuss your skincare range?</h2><p>Send your product interests and business requirements.</p></div>
+<a class="btn" href="index.html#contact">Request a Quote →</a>
 </div>
-
-<a class="btn" href="index.html#contact">
-Request a Quote →
-</a>
-
-</div>
-
 </section>
-
 </main>
 
-
 <footer>
-
 <div class="wrap">
-
 <div class="footer-top">
-
 <div class="footer-brand">
-
-<a class="logo" href="index.html">
-Shibifen
-<small>SKINCARE FOR A BETTER TOMORROW</small>
-</a>
-
-<p>
-Skincare products and OEM/ODM collaboration for global business customers.
-</p>
-
+<a class="logo" href="index.html">Shibifen<small>SKINCARE FOR A BETTER TOMORROW</small></a>
+<p>Skincare OEM/ODM, private label products and export project support for global beauty businesses.</p>
 </div>
-
-
 <div class="footer-links">
-
 <a href="index.html">Home</a>
 <a href="products.html">Products</a>
 <a href="index.html#oem">OEM/ODM</a>
-<a href="index.html#about">About Us</a>
 <a href="index.html#quality">Quality</a>
 <a href="index.html#contact">Contact</a>
-
 </div>
-
 </div>
-
-
-<div class="copyright">
-
-<span>
-© <span id="year"></span> Shibifen. All rights reserved.
-</span>
-
-<span>
-Private Label · OEM · ODM · Skincare Products
-</span>
-
+<div class="copyright"><span>© <span id="year"></span> Shibifen. All rights reserved.</span><span>Private Label · OEM · ODM · Skincare Products</span></div>
 </div>
-
-</div>
-
 </footer>
-
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
